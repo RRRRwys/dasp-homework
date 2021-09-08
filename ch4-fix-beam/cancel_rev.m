@@ -38,5 +38,3 @@ end
 
 filename = 'speech_rev_ds_90.wav';
 audiowrite(filename, y1, fs);
-
-% 0
