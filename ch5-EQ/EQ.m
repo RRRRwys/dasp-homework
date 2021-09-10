@@ -3,17 +3,17 @@ function y = EQ(gain,Qs,fs,x)
 % 采用参数滤波器的峰值滤波器，通过组合他们得到均衡器
 % F0 中包含所有可调的频点，是一个长度为 18 的数组
 % Input:
-%   gain：标记每个频点的增益。是一个长度为 18 的数组，对应于 F0 中的频点，单位是 dB，缺省为全0
+%   gain：标记每个频点的增益。是一个长度为 18 的数组，对应 F0 中的频点，单位是 dB，缺省为 0
 %   Qs: 是每个频点的 Q 值，Q值越大，调节越精确，影响范围越窄，缺省参数见代码
 %   fs: 是采样频率，单位是Hz，缺省为 44100 Hz
 %   x: 是输入的信号，缺省为空
 % Output:
-%   y: 是输入信号经过给定均衡器的输出
+%   y: 是输入信号经过给定均衡器的输�?
 %   调用本函数后会绘制，当前均衡器的频响曲线
 
 F0 = [55, 77, 110, 156, 220, 311,440,622,880,1200,1800,2500,3500,5000,7000,10000,14000,20000];
-numF = length(F0)
-length(gain)
+numF = length(F0);
+length(gain);
 
 if (nargin <= 3)
     x = [];
@@ -57,11 +57,11 @@ for i = 1:numF
 end
 
 if(~isempty(x))
-    y = zeros(length(x));
+    y = zeros(length(x),1);
     for i = 1:numF
         y = y + filter(numerator_B(i,:), denominator_A(i,:),x);
     end
-    y = y / len(F0);
+    y = y / length(F0);
 end
 
 % plot 
