@@ -11,4 +11,3 @@ def cal_pesq(f1,f2):
 
 cal_pesq('./nearspeech.wav', './output.wav')
 cal_pesq('./nearspeech.wav', './rec.wav')
-

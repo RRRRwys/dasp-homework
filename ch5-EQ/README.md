@@ -15,6 +15,8 @@
 
 ## 代码
 
+全部代码及测试数据：https://github.com/RRRRwys/dasp-homework
+
 - EQ.m 
 ```matlab
 function y = EQ(gain,Qs,fs,x)
@@ -27,7 +29,7 @@ function y = EQ(gain,Qs,fs,x)
 %   fs: 是采样频率，单位是Hz，缺省为 44100 Hz
 %   x: 是输入的信号，缺省为空
 % Output:
-%   y: 是输入信号经过给定均衡器的输�?
+%   y: 是输入信号经过给定均衡器的输出
 %   调用本函数后会绘制，当前均衡器的频响曲线
 
 F0 = [55, 77, 110, 156, 220, 311,440,622,880,1200,1800,2500,3500,5000,7000,10000,14000,20000];
@@ -106,6 +108,7 @@ grid on;
 title('EQ');
 
 end
+
 ```
 
 - test.m 

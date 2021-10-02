@@ -72,6 +72,8 @@ h = rir_generator(c, fs, r, s, L, beta, nsample, mtype, order, dim, orientation,
 
 ### 代码
 
+全部代码及测试数据：https://github.com/RRRRwys/dasp-homework
+
 ```python
 # -*- coding:utf-8 -*-
 import numpy as np
